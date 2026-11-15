@@ -1,5 +1,7 @@
 # lagline
 
+[Live demo](https://aditya2375.github.io/lagline/)
+
 A Java-first moving-average backtest with an explicit information clock. Prior-close SMA signals execute at the next supplied open. A cash-and-shares ledger accounts for each fill and charge, including a predeclared final liquidation. Buy-and-hold uses the same interval and costs.
 
 Three original generated price controls, adjustable SMA windows and per-side charges, paired price/wealth charts, an execution-date inspector and every strategy fill. Optional local daily open/close CSV stays in page memory. No feeds, accounts, trades or recommendations.
