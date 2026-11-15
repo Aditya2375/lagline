@@ -70,4 +70,6 @@ jobs:
           tar xzf /tmp/gitleaks.tar.gz -C /tmp gitleaks
           /tmp/gitleaks git --redact --exit-code 2 --log-level warn --config .gitleaks.toml .
       - name: semgrep (local rules, no account)
-        run: pipx run --spec semgrep==1.183.0 semgrep --config .github/semgrep-rules.yml --error web/src/ tools/*.mjs tests/*.mjs
+        run: |
+          pipx run --spec semgrep==1.183.0 semgrep --config .github/semgrep-rules.yml --error web/src/ tools/*.mjs tests/*.mjs
+          pipx run --spec semgrep==1.183.0 semgrep --config .github/no-network.yml --error web/src/

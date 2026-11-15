@@ -17,15 +17,3 @@ rules:
     message: eval and new Function are forbidden.
     severity: ERROR
     languages: [typescript, javascript]
-  - id: no-runtime-network
-    pattern-either:
-      - pattern: fetch(...)
-      - pattern: new WebSocket(...)
-      - pattern: new XMLHttpRequest(...)
-      - pattern: navigator.sendBeacon(...)
-    paths:
-      include:
-        - "**/web/src/**"
-    message: Local runtime must not make network connections.
-    severity: ERROR
-    languages: [typescript, javascript]
